@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="contabla">
+        <table class="table tabla">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">
+                        <button (click)="nuevaNota()" class="btn btn-primary">Nueva nota</button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let nota of notas; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{nota.nombre+" #"+(i+1)}}</td>
+                    <td>
+                        <div class="largo input-group mb-3">
+                            <input [name]="i" [(ngModel)]="nota.valor" [value]="nota.valor" type="number" class="form-control" placeholder="Ingrese Nota">
+                        </div>
+                    </td>
+                    <td>
+                        <button (click)="eliminarNota(nota)" class="btn btn-danger">
+                          Borrar
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"></th>
+                    <td>Promedio</td>
+                    <td>{{Promedio| number}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

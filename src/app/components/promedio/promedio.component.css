@@ -1,0 +1,13 @@
+.contabla {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center
+}
+
+.tabla {
+    width: 500px;
+}
+
+.largo {
+    width: 100px;
+}
